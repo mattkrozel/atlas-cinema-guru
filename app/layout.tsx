@@ -16,11 +16,13 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body className={`antialiased bg-navy text-white flex flex-col`}>
-          <Header />
-        <div>
-          <NavBar />
-          {children}
-        </div>
+        <SessionProvider>
+            <Header />
+          <div className="flex flex-row">
+            <NavBar />
+            {children}
+          </div>
+        </SessionProvider>
       </body>
     </html>
   );
