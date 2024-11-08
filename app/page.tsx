@@ -1,9 +1,10 @@
+import Filters from "@/components/filters";
 
 
 export default async function Page() {
   return (
-      <div className="flex items-center justify-center h-screen">
-
+      <div className="flex flex-col w-screen h-screen">
+        <Filters />
       </div>
   );
 }

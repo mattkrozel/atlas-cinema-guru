@@ -6,7 +6,8 @@ export default {
       'navy': '#00003c',
       'teal': '#85F1D2',
       'white': '#fff',
-      'darkerTeal': '#63CFB1'
+      'darkerTeal': '#63CFB1',
+      'lighterNavy': '#000061'
     }
   },
   plugins: [],
