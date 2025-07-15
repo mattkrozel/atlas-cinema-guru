@@ -1,6 +1,7 @@
 import "@/app/global.css";
-import Header from "@/components/header";
-import NavBar from "@/components/navBar";
+import { inter } from "@/app/fonts";
+import Header from "@/components/Header";
+import NavBar from "@/components/NavBar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,9 +15,9 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={`antialiased  bg-[#00003c] text-white`}>
+      <body className={`${inter.className} antialiased  bg-[#00003c] text-white flex flex-col`}>
           <Header />
-        <div>
+        <div className={'flex flex-row'}>
           <NavBar />
           {children}
         </div>
