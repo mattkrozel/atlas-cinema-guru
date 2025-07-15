@@ -1,7 +1,11 @@
-export default async function WelcomeMessage() {
+'use client';
+import { useSession } from "next-auth/react";
+
+export default function WelcomeMessage() {
+  const { data: session } = useSession();
   return (
     <div className={'mr-4'}>
-      Welcome, example@example.com
+      Welcome, {session?.user?.email}
     </div>
   );
 }
