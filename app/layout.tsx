@@ -1,7 +1,7 @@
 import "@/app/global.css";
 import { inter } from "@/app/fonts";
-import Header from "@/components/Header";
-import NavBar from "@/components/NavBar";
+import Header from "@/components/header";
+import NavBar from "@/components/navBar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
