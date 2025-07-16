@@ -16,9 +16,12 @@ export default async function Card() {
         className={'object-cover w-full h-full'}
       />
       <div className={'absolute bottom-0 left-0 right-0 p-4 bg-[#000061] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300'}>
-        <h2 className={''}>Beneath the Surface (2021)</h2>
-        <p className={''}>A marine biologist discovers a hidden underwater civilization</p>
-        <div className={''}>Sci-Fi</div>
+        <h2 className={'text-lg my-2'}>Beneath the Surface (2021)</h2>
+        <p className={'text-base my-2'}>A marine biologist discovers a hidden underwater civilization</p>
+        <div className={'flex flex-wrap justify-start gap-2'}>
+          <div className={'my-2 bg-[#63CFB1] rounded-3xl p-2'}>Sci-Fi</div>
+          <div className={'my-2 bg-[#63CFB1] rounded-3xl p-2'}>Adventure</div>
+        </div>
       </div>
     </div>
   );
