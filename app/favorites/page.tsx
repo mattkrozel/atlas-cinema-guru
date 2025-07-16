@@ -1,7 +1,11 @@
+import MovieCards from "@/components/MovieCards";
+import FavoritesHeader from "@/components/FavoritesHeader";
+
 export default async function Page() {
   return (
-    <div className="flex items-center justify-center h-screen">
-      Favorites page
+    <div className="flex flex-col w-screen h-screen">
+      <FavoritesHeader />
+      <MovieCards />
     </div>
   );
 }

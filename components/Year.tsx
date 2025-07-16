@@ -1,6 +1,6 @@
 export default async function Year() {
   return (
-      <form className={'flex m-3 justify-between'}>
+      <div className={'flex m-3 justify-between'}>
         <div className={'flex flex-col'}>
           <label htmlFor="minYear" className={'mb-2'}>Min Year</label>
           <input 
@@ -23,6 +23,6 @@ export default async function Year() {
             className={'bg-[#000061] outline-1 outline-[#85F1D2] rounded-3xl p-2'}
           />
         </div>
-      </form>
+      </div>
   );
 }
