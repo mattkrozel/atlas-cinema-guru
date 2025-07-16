@@ -1,4 +1,4 @@
-import LatestActivity from "./latestActivity";
+import LatestActivity from "./LatestActivity";
 import { HomeButton, FavoritesButton, WatchLaterButton } from "./NavButtons";
 
 export default async function NavBar() {

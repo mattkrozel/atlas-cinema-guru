@@ -1,4 +1,4 @@
-import LatestActivityItem from "./latestActivityItem";
+import LatestActivityItem from "./LatestActivityItem";
 
 export default async function LatestActivity() {
     return (

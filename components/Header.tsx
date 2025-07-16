@@ -1,5 +1,5 @@
 import Logo from "./Logo";
-import LogOutButton from "./logOutButton";
+import LogOutButton from "./LogOutButton";
 import WelcomeMessage from "./WelcomeMessage";
 
 
