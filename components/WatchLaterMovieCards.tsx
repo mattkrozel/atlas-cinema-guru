@@ -1,10 +1,31 @@
+'use client'
+
 import Card from "./Card";
 import NextButton from "./NextButton";
 import PreviousButton from "./PreviousButton";
 import { UsersTitle } from "@/lib/definitions";
 import { useState } from "react";
 
-export default function WatchLaterMovieCards() {
+
+interface MovieCardsProps {
+  initialData: UsersTitle[];
+}
+
+export default function WatchLaterMovieCards({ initialData }: MovieCardsProps) {
+  const [movieTitles, setMovieTitles] = useState(initialData);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handlePageChange = async (newPage: number) => {
+    setCurrentPage(newPage);
+    try {
+      const res = await fetch(`/api/titles?page=${newPage}`);
+      const data = await res.json();
+      setMovieTitles(data.title);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
 
   return (
     <div className={'flex flex-col'}>
@@ -14,8 +35,8 @@ export default function WatchLaterMovieCards() {
         ))}
       </div>
       <div className={'flex justify-center mb-7'}>
-        <PreviousButton />
-        <NextButton />
+        <PreviousButton handlePageChange={handlePageChange} movieTitles={movieTitles} currentPage={currentPage} />
+        <NextButton handlePageChange={handlePageChange} movieTitles={movieTitles} currentPage={currentPage} />
       </div>
     </div>
   );
